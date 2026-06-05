@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Text, View } from "react-native";
 
 
@@ -14,4 +15,4 @@ const FlatListChild = ({ firstName, lastName, email }) => {
     )
 }
 
-export default FlatListChild; 
+export default memo(FlatListChild); 
