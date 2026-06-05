@@ -21,7 +21,8 @@ function Screen1() {
     const [ index, setIndex ]  = useState([]) 
     const [ state, setState ] = useState(10)
 
-    const ref = useRef(10)
+    let ref = useRef(10)
+
 
     const getData = async () => {
         try {
@@ -74,6 +75,7 @@ cacheUserFunction()
             title={`Update State: ${state}`}
             onPress={() => {
                 setState(state+1)
+                ref.current = ref.current + 1
             }}/>
             <Text>This is a ref: {ref.current}</Text>
             <Text>This is the length of the users under age 29: {userFilter.length}</Text>
